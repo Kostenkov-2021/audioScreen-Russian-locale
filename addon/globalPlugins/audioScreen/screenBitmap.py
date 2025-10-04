@@ -11,11 +11,16 @@ gdi32=ctypes.windll.gdi32
 class ScreenBitmap(object):
 	"""Provides a way to capture a bitmap of any part of the screen. The object caches needed DCs and bitmaps therefore an instance of an object only handles one size of bitmap."""
 
-	def __init__(self,width,height):
+	def __init__(
+		self,
+		width: int,
+		height: int
+	) -> None:
 		"""
 		@param width: the width of the resulting bitmap in rgb pixels.
 		@param height: the height of the bitmap in rgb pixels.
 		"""
+		super().__init__()
 		self.width=width
 		self.height=height
 		#Fetch the device context for the screen

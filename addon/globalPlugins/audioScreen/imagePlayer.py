@@ -1,9 +1,12 @@
-
-
+import os
 import math
 import colorsys
-from . import libaudioverse
 import wx
+# Load 32-bit or 64-bit libaudioverse depending on processor (app) architecture.
+if os.environ["PROCESSOR_ARCHITECTURE"] in ("AMD64", "ARM64"):
+	from . import libaudioverse64 as libaudioverse
+else:
+	from . import libaudioverse
 from .screenBitmap import rgbPixelBrightness
 
 fadeLength=0.05
@@ -16,7 +19,18 @@ class ImagePlayer_pitchStereoGrey(object):
 	sweepDuration=4
 	_sweeperCallback=None
 
-	def __init__(self,width,height,lowFreq=500,highFreq=5000,sweepDelay=0.5,sweepDuration=4,sweepCount=4,reverseBrightness=False):
+	def __init__(
+		self,
+		width: int,
+		height: int,
+		lowFreq: float = 500.0,
+		highFreq: float = 5000.0,
+		sweepDelay: float = 0.5,
+		sweepDuration: float = 4.0,
+		sweepCount: int = 4,
+		reverseBrightness: bool = False
+	) -> None:
+		super().__init__()
 		self.width=width
 		self.height=height
 		self.baseFreq=lowFreq
@@ -141,7 +155,14 @@ class ImagePlayer_pitchStereoGrey(object):
 
 class ImagePlayer_hsv(object):
 
-	def __init__(self,width,height,lowFreq=90,highFreq=4000):
+	def __init__(
+		self,
+		width: int,
+		height: int,
+		lowFreq: float = 90.0,
+		highFreq: float = 4000.0
+	) -> None:
+		super().__init__()
 		self.width=width
 		self.height=height
 		self.lowFreq=lowFreq
