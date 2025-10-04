@@ -11,6 +11,7 @@ import globalPluginHandler
 import touchHandler
 import globalCommands
 import scriptHandler
+import addonHandler
 import api
 import ui
 from NVDAObjects import NVDAObject
