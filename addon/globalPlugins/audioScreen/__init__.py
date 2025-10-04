@@ -97,7 +97,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			("highFreq","float",5000.0,_("highest frequency in HZ")),
 			("sweepDelay","float",0.5,_("Initial stereo sweep Delay in seconds")), 
 			("sweepDuration","float",4.0,_("Duration of stereo audio sweep in seconds")), 
-			("sweepCount","integer",4,_("Numver of stereo sweeps")), 
+			("sweepCount","integer",4,_("Number of stereo sweeps")), 
 			("captureWidth","integer",32,_("width (in pixels) of the rectangle at the point under your finger / the mouse")),
 			("captureHeight","integer",32,_("height (in pixels) of the rectangle at the point under your finger / the mouse")),
 		]),
