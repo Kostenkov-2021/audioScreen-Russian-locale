@@ -22,6 +22,8 @@ if os.environ["PROCESSOR_ARCHITECTURE"] in ("AMD64", "ARM64"):
 else:
 	from . import libaudioverse
 
+addonHandler.initTranslation()
+
 class AudioScreenPanel(SettingsPanel):
 	# Translators: This is the label for the AudioScreen settings panel.
 	title = _("AudioScreen")

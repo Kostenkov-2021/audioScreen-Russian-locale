@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AudioScreen\n"
-"POT-Creation-Date: 2025-09-21 10:54+0300\n"
-"PO-Revision-Date: 2025-09-21 13:02+0300\n"
+"POT-Creation-Date: 2025-10-04 16:00+0300\n"
+"PO-Revision-Date: 2025-10-04 16:01+0300\n"
 "Last-Translator: nvda.ru\n"
 "Language-Team: Russian translation team <nvda.ru>, Danil Kostenkov "
 "<danilkostenkov38@gmail.com>\n"
@@ -109,52 +109,52 @@ msgstr "Наименьшая частота (синий) (в герцах)"
 msgid "highest frequency (red) in HZ"
 msgstr "наибольшая частота (красный) (в герцах)"
 
-#: addon/globalPlugins/audioScreen/__init__.py:167
+#: addon/globalPlugins/audioScreen/__init__.py:181
 msgid "AudioScreen off"
 msgstr "Звуковое представление экрана выключено"
 
-#: addon/globalPlugins/audioScreen/__init__.py:175
+#: addon/globalPlugins/audioScreen/__init__.py:189
 msgid "touch input"
 msgstr "сенсорный ввод"
 
-#: addon/globalPlugins/audioScreen/__init__.py:175
+#: addon/globalPlugins/audioScreen/__init__.py:189
 msgid "mouse input"
 msgstr "ввод мышью"
 
-#: addon/globalPlugins/audioScreen/__init__.py:176
+#: addon/globalPlugins/audioScreen/__init__.py:190
 #, python-brace-format
 msgid "AudioScreen mode {mode}, {inputType}"
 msgstr "Режим звукового представления экрана: {mode}, {inputType}"
 
-#: addon/globalPlugins/audioScreen/__init__.py:180
+#: addon/globalPlugins/audioScreen/__init__.py:194
 msgid "Toggles AudioScreen   between several modes"
 msgstr "Переключает аудиоэкран между несколькими режимами"
 
-#: addon/globalPlugins/audioScreen/__init__.py:187
+#: addon/globalPlugins/audioScreen/__init__.py:201
 msgid "Toggles between light on dark, and dark on light"
 msgstr "Переключает между светлым на тёмном и тёмным на светлом"
 
-#: addon/globalPlugins/audioScreen/__init__.py:191
+#: addon/globalPlugins/audioScreen/__init__.py:205
 msgid "Audioscreen currently off"
 msgstr "Сейчас звуковое представление экрана выключено"
 
-#: addon/globalPlugins/audioScreen/__init__.py:203
+#: addon/globalPlugins/audioScreen/__init__.py:216
 msgid "Plays the image under your fingers"
 msgstr "Воспроизводит изображение под вашими пальцами"
 
-#: addon/globalPlugins/audioScreen/__init__.py:230
+#: addon/globalPlugins/audioScreen/__init__.py:243
 msgid "Stops audioScreen playback"
 msgstr "Останавливает воспроизведение изображения"
 
-#: addon/globalPlugins/audioScreen/__init__.py:241
+#: addon/globalPlugins/audioScreen/__init__.py:254
 msgid "Plays the image of the current navigator object"
 msgstr "Воспроизводит изображение текущего объекта навигатора"
 
-#: addon/globalPlugins/audioScreen/__init__.py:246
+#: addon/globalPlugins/audioScreen/__init__.py:259
 msgid "AudioScreen disabled"
 msgstr "Звуковое представление экрана выключено"
 
-#: addon/globalPlugins/audioScreen/__init__.py:254
+#: addon/globalPlugins/audioScreen/__init__.py:267
 msgid "Shows AudioScreen setttings"
 msgstr "Открывает настройки звукового представления экрана"
 
@@ -170,9 +170,13 @@ msgstr ""
 
 #: buildVars.py:29
 msgid ""
+"* Made the add-on code more robust with help from Pyright (a Python static "
+"type checker).\n"
 "* Improved compatibility with NVDA 2026.1, including compatibility with 64-"
 "bit NVDA."
 msgstr ""
+"Повышена надёжность кода дополнения с помощью средства проверки статических "
+"типов на Python Pyright.\n"
 "* Улучшена совместимость с NVDA 2026.1, включая совместимость с 64-разрядной "
 "версией NVDA."
 
