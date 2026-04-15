@@ -1,7 +1,9 @@
 # AudioScreen: an experiment in image accessibility for blind people
+
 By Michael Curran, NV Access Limited, Joseph Lee
 
 ## Introduction
+
 Audio Screen is an add-on for the [NVDA Screen Reading software](http://www.nvaccess.org/). Audio Screen can allow a blind person to move their finger around a Windows 8+ compatible touch screen, and hear the part of the image under their finger. If a touch screen is not available, the mouse can be moved instead, though this is some what less accurate for the user as mouse movement is relative.
 
 Here a [demonstration of AudioScreen by Michael Curran [mp3 file, 17 mb]](http://www.nvaccess.org/audioScreen/audioScreenDemo20151129.mp3) where he demonstrates the various modes, and uses it to explore a map of Australia, a rainbow, the earth from space, a cartoon house, and a sun set.
@@ -15,8 +17,11 @@ AudioScreen has two modes of output: "pitch stereo grey" for investigating lines
 ## Pitch Stereo Grey mode
 
 In this mode, AudioScreen represents the image under your finger or the mouse as multiple tones that vary in pitch, volume and stereo position. The idea is based on the vOICe visual-to-auditory mapping system by Peter Meijor. (www.seeingwithsound.com) 
-audio Screen strives to provide roughly the same information your finger would for tactile diagrams. You can tell when your finger or mouse moves over a line, both horizontally and vertically. 
+
+AudioScreen strives to provide roughly the same information your finger would for tactile diagrams. You can tell when your finger or mouse moves over a line, both horizontally and vertically. 
+
 For example if your finger crosses a horizontal line as it moves down the screen, you can hear the line move up over your finger. If your finger crosses a vertical line as you move across the screen from left to right, you will hear the line move across your finger from right to left. 
+
 If you leave your finger or mouse stationary at a point on the screen for more than half a second, audioScreen will start sweeping the  audio from left to right, isolating single columns of pixels, providing much more extreme detail of the image to help with detecting patterns etc.
 
 If you place more than one finger on the screen at a time, audioScreen will sweep over the image bounded by all your fingers. For example, placing one finger at the top left of a large image, and one finger at the bottom right, audioScreen will sweep over the entire image.
@@ -35,7 +40,7 @@ Brightness is represented by the over all volume of the sound as a whole.
 
 Some examples:
 
-* black: silence
+* Black: silence
 * White: loud random noise
 * Vivid blue: a very low tone
 * Vivid yellow: a mid to high tone
@@ -44,16 +49,19 @@ Some examples:
 * Dark grey: quiet random noise.
 
 ## System requirements
-* An installed copy of NVDA 2024.1 or higher
-* Windows 10 Operating system or later
+
+* An installed copy of NVDA 2025.3.3 or higher
+* Windows 10 or 11
 * A Windows 10/11 compatible touch screen, otherwise a mouse. 
 * Visual feedback for touch must be turned off in Windows. Search for Change Touch Input setting in the start screen, and in that dialog uncheck Show visual feedback when touching the screen.
 
 ## Download
+
 * Download AudioScreen from the add-on store.
 * Download [Example images [zip file]](http://www.nvaccess.org/audioScreen/audioScreenImages.zip).
 
 ## Running AudioScreen
+
 After the add-on is installed from the add-on store, NVDA will ask to be restarted. 
 
 Important: Visual feedback for touch must be turned off in Windows. Search for Change Touch Input setting in the start screen, and in that dialog uncheck Show visual feedback when touching the screen.
@@ -63,82 +71,103 @@ While NVDA is running with this add-on installed, open an interesting image in f
 AudioScreen is off by default, so turn it on by switching to a different mode from AudioScreen settings (NVDA Menu/Preferences/Settings/AudioScreen). This toggles between Pitch stereo grey, HSV color, and off.
 
 Now move your finger or mouse around the screen and start listening to the image under your finger. 
+
 As NVDA can also speak controls and text under your finger, viewing an SVG map or diagram works great, as Internet Explorer will allow NVDA to speak the title and or description for any shape your finger moves over, assuming that a title and or description have been properly defined using the title and desc tags appropriately in the SVG file. 
 
 ## Commands
+
 You can add or change keyboard commands by going to NVDA menu/Preferences/Input gestures under AudioScreen category.
 
 ### Change Audio Mode (unassigned)
+
 This command toggles between several modes: 
 
-* pitch stereo grey: for investigating lines and contours of images (useful for maps and diagrams etc)
+* Pitch stereo grey: for investigating lines and contours of images (useful for maps and diagrams etc)
 * HSV color: for investigating the color variation of images (useful for photographs).
 * Off [default]: completely disables AudioScreen.
 
 ### Play Navigator Object (Press NVDA+alt+a)
+
 This command will play NVDA's current navigator object, by performing multiple vOICe-style stereo sweeps across it.
 
 ### Show Settings (unassigned)
+
 This brings up AudioScreen category from NVDA settings dialog which allows you to change multiple options for audioScreen. The Settings UI can also be launched by choosing AudioScreen category found in the NVDA menu/Preferences/Settings.
 
 ## Settings
 
 ### AudioScreen Mode
+
 Choose the desired mode:
 
-* pitch stereo grey: for investigating lines and contours of images (useful for maps and diagrams etc)
+* Pitch stereo grey: for investigating lines and contours of images (useful for maps and diagrams etc)
 * HSV color: for investigating the color variation of images (useful for photographs).
 * Off [default]: completely disables AudioScreen.
 
 ### Pitch Stereo Grey settings
 
 #### Reverse brightness
+
 This option allows you to reverse the brightness of the image, so that rather than light being loud and dark being quiet, dark will be loud and light will be quiet. Very useful when playing an image where the foreground objects are darker than the background.
 
 #### Number of columns in stereo field
+
 How wide (in pixels) the image should be. When moving with your finger or the mouse, this is literally how wide the captured image is. For play navigator object, although the full image is fetched, it is compressed or stretched to fit this width.
 
 #### Number of rows (frequencies) 
+
 How tall (in pixels) the image should be. Each row of pixels is represented by a particular frequency. frequencies are spread out logarithmically. When moving with your finger or the mouse, this is literally how tall the captured image is. For play navigator object, although the full image is fetched, it is compressed or stretched to fit this height.
 
 #### Lowest frequency in HZ
+
 The frequency (in HZ) used for the bottom most row of the image.
 
 #### Highest frequency in HZ
+
 The frequency (in HZ) Used for the top most row of the image.
 
 #### Initial stereo sweep delay in seconds
+
 How long audioScreen should wait (in seconds) to start sweeping an image, after your finger or the mouse has moved.
 
 #### Duration of stereo audio sweep in seconds
+
 How long (in seconds) each sweep should go for. 
 
 #### Number of stereo sweeps
+
 The number of sweeps that should be played once your finger or the mouse has moved, or when the play navigator object command is run.
 
 #### Width (in pixels) of the rectangle at the point under your finger / the mouse
+
 How wide is the capture area when playing a single point on the screen.
 
 #### Height (in pixels) of the rectangle at the point under your finger / the mouse
+
 How tall is the capture area when playing a single point on the screen.
 
 ### HSV Color settings
 
 #### Horizontal length of capture area in pixels
+
 The width (in pixels) of the area under your finger or the mouse captured to detect the color. The color is averaged over this area. Smaller values will give more accurate colors, though can cause you to hear more detail than perhaps seen visually.
 
 #### Vertical length of capture area in pixels
+
 The height (in pixels) of the area under your finger or the mouse captured to detect the color. The color is averaged over this area. Smaller values will give more accurate colors, though can cause you to hear more detail than perhaps seen visually.
 
 #### Lowest frequency (blue) in HZ
+
 The frequency (in HZ) that represents blue. The frequency rises through aqua, green, yellow, orange, to red. As the color spectrum raps around from red back to blue through purple, purples are represented by both the low (blue) frequency and high (red) frequency at differing volume ratios. I.e. A blue-ish purple will be mostly the low (blue) frequency with a small amount of the high (red) frequency).
 
 #### highest frequency (red) in HZ
+
 The frequency (in HZ) that represents red. The frequency falls through orange, yellow, green, aqua, to blue. As the color spectrum raps around from blue back to red through purple, purples are represented by both the low (blue) frequency and high (red) frequency at differing volume ratios. I.e. A red-ish purple will be mostly the high (red) frequency with a small amount of the low (blue) frequency.
 
 ## Developing and Packaging from source
 
 Clone the AudioScreen repository with the command:
+
 git clone https://www.github.com/josephsl/audioScreen
 
 [Python 3.11](http://www.python.org/)  is required for building and developing this project. In addition, the following packages are required:
@@ -149,15 +178,18 @@ git clone https://www.github.com/josephsl/audioScreen
 * GNU Gettext package for localizable message generation
 
 ### Packaging the NVDA add-on
+
 In the addon directory:
 
 1. Install the needed dependencies, including SCons, markdown, and GNU Gettext.
 2. From a command-line interface, run "scons" (without quotes).
 
 ### Contributing
+
 Use the GitHub repository to create issues and/or offer pull requests. Localization is not accepted at this time.
 
 ## Background
+
 From Michael Curran
 
 For quite some time now, I have wanted a way to get access as a blind person to maps and basic diagrams with out the hassles of having to produce them in a tactile format. 
@@ -178,4 +210,5 @@ I should also note that I am aware of other research in to conveying images on t
 When conveying information from one sence modality to another, I believe its very important not to lose information in the process. If you can provide roughly the same or better resolution in the second sence, the brain will have a much easier time of decoding the information. A mapping such as the vOICe I believe certainly gets extremely close to achieving this. 
 
 ### Mapping color to sound
+
 Although access to basic diagrams such as maps and other line-based drawings have many practical applications for the blind, there is also an argument that access to color images such as in art or the beauty of the world, has some subjective importance. For example  how colors vary in a rainbow, or a picture of the earth from space. These things are very hard to describe in words.
